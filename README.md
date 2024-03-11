@@ -6,7 +6,7 @@ Printydoodad is a project designed to generate custom 3D models and start them p
 
 This system operates locally, running on a PC rather than a mobile device.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n1W-YVuqYB0" frameborder="0" allowfullscreen></iframe>
+[![Everything Is AWESOME](https://img.youtube.com/vi/n1W-YVuqYB0/0.jpg)](https://www.youtube.com/watch?v=n1W-YVuqYB0 "Everything Is AWESOME")
 
 ## How It Works
 
