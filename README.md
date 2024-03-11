@@ -1,4 +1,4 @@
-# Printydoodad
+# Printydoodad Speak2Print
 
 Speech to 3D print using TripoSR
 
