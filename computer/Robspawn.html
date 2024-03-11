@@ -283,10 +283,10 @@
 
 	    let textPromptValue = prompt
 	    promptText["10"]["inputs"]["text"] = textPromptValue;
-	    //promptText["8"]["inputs"]["seed"] = Math.floor(Math.random() * 10000000000);
-		// a dog earing a top hat 95397634906803 95394906803
+	    promptText["8"]["inputs"]["seed"] = Math.floor(Math.random() * 10000000000);
 		
-	    promptText["8"]["inputs"]["seed"] = 33333333
+		
+	    
 	    console.log("Text prompt set to: " + textPromptValue);
 	    sendPromptToAPI("promptText")
 	    startChecking()
