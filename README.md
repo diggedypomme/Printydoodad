@@ -6,7 +6,7 @@ Printydoodad is a project designed to generate custom 3D models and start them p
 
 This system operates locally, running on a PC rather than a mobile device.
 
-![Alt text](/images/pirate.png "generating a pirate dog")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n1W-YVuqYB0" frameborder="0" allowfullscreen></iframe>
 
 ## How It Works
 
@@ -38,3 +38,6 @@ You would need to update these references in the code
 
 Special thanks to:
 - Three.js (threejs.org) for its library and examples. Visit [Three.js](https://threejs.org/examples/webgl_loader_obj.html) for more information.
+
+
+![Alt text](/images/pirate.png "generating a pirate dog")
