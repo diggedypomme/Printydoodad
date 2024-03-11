@@ -1,0 +1,1 @@
+This is just here because android won't let you grab the microphone unless running under https or a local file. This uses a local file to add the speech to text then sends it down into an iframe of the page. Gross hack? It works. Fine for now
