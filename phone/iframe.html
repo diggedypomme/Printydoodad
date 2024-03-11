@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        iframe {
+            width: 100%; /* Set the width of the iframe */
+            height: 100%; /* Set the height of the iframe */
+            border: none;
+            display: block;
+            margin: auto; /* Center the iframe horizontally */
+
+        }
+		        #recognition {
+				color:white;
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            left: 50px; /* Adjust as needed */
+            z-index: 9999; /* Ensure it appears above the iframe */
+        }
+        #startButton {
+		color:white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        #output {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+	
+	
+</head>
+
+
+
+<body>
+
+<div id="recognition" >
+    <button id="startButton">Start Recognition</button>
+    <div id="output"></div>
+</div>
+    <iframe id="threeiframe" src="http://192.168.0.2:8000/three.js/examples/dreamthink.html"></iframe>
+</body>
+
+
+ <script>
+        const startButton = document.getElementById('startButton');
+        const output = document.getElementById('output');
+        
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+
+        recognition.onstart = function() {
+            output.textContent = 'Listening...';
+        };
+
+        recognition.onerror = function(event) {
+            output.textContent = 'Error occurred in recognition: ' + event.error;
+        };
+
+        recognition.onresult = function(event) {
+            const transcript = event.results[0][0].transcript;
+            output.textContent = 'You said: ' + transcript;
+	         // Send the recognized text to the iframe
+			 let myframe = document.getElementById("threeiframe")
+            myframe.contentWindow.postMessage(transcript, '*');
+      		
+			
+        };
+
+        startButton.addEventListener('click', function() {
+            recognition.start();
+        });
+    </script>
+	
+	
+</html>
