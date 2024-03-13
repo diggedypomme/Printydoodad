@@ -30,7 +30,7 @@ H:\XLXL\comfy4\three.js\examples\dreamthink.html
 H:\XLXL\comfy4\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\output  (...lol..sorry)
 You would need to update these references in the code
 
-# KKnown issues
+# Known issues
 -The timer is not accurate. The bar will go green when loaded, but the slider is just a guesstimate based on the time it normally takes to do them. Feel free to change that
 -others. Will fill this in when I know
 -Don't run this with access to the net. I had to mess with cors to get it to work, and there is absolutely no input verification. Use at your own risk and all that
